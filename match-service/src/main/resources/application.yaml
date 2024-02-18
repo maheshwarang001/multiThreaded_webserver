@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: match-service
+
+  config:
+    import:
+      "optional:configserver:http://localhost:8888"
+  jpa:
+    show_sql: true
+    defer-datasource-initialization: false
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.MySQLDialect"
+        hbm2ddl:
+          auto: "create"
+
+  datasource:
+    url: "jdbc:mysql://localhost:3306/match_db"
+    username: "root"
+    password: "123456789"

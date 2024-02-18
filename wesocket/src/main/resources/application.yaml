@@ -1,0 +1,13 @@
+redis:
+  value:
+    topic: "pubsub:swipe-io-channel"
+
+spring:
+  profiles:
+    active: native
+  application:
+    name: websocket
+
+  config:
+    import:
+      "optional:configserver:http//localhost:8888"

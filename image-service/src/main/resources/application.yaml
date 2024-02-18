@@ -1,0 +1,39 @@
+cloud:
+  aws:
+    credentials:
+        access-key: AKIAUROEV7APVTWRNDDF
+        secret-key: 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
+    region:
+      static: eu-west-2
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: swipe-images-io
+
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: image_meta_data
+
+
+  servlet:
+    multipart:
+      enabled: true
+
+  application:
+    name: image-service
+
+  config:
+    import:
+      "optional:configserver:http//localhost:8888"
+server:
+  tomcat:
+    max-swallow-size: -1
+
+

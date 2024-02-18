@@ -1,0 +1,5 @@
+FROM openjdk:17
+LABEL maintainer = "swipe.io"
+ADD target/Config-Service-0.0.1-SNAPSHOT.jar Config-Service.jar
+EXPOSE 8780
+ENTRYPOINT ["java","-jar","Config-Service.jar"]
