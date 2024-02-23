@@ -50,7 +50,7 @@ public class Client {
         Client client = new Client();
         try{
 
-            for(int i = 0 ; i< 500 ; i++){
+            for(int i = 0 ; i< 1000 ; i++){
                 try {
                     Thread thread = new Thread(client.getRunnable());
                     thread.start();

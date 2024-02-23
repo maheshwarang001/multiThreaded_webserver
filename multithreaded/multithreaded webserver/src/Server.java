@@ -3,11 +3,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.logging.Logger;
+
 
 public class Server {
 
-    private static final Logger log = Logger.getLogger(Server.class.getName());
+
     private final ExecutorService threadPool;
 
     public Server(int poolSize) {
@@ -33,7 +33,7 @@ public class Server {
             socket.close();
 
         } catch (IOException e) {
-            log.warning(e.getMessage());
+            e.printStackTrace();
         }
     }
 
